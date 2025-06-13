@@ -106,4 +106,15 @@
 
       // Fórmula da parcela com juros compostos (Price)
       const parcela = financiamento * (taxaMensal * Math.pow(1 + taxaMensal, prazoMeses)) / 
-                      (Mat
+                      (Math.pow(1 + taxaMensal, prazoMeses) - 1);
+
+      resultado.innerHTML = `
+        Valor financiado: R$ ${financiamento.toFixed(2)}<br>
+        Prazo: ${prazoMeses} meses<br>
+        Parcela estimada: <strong>R$ ${parcela.toFixed(2)}</strong> ao mês
+      `;
+    }
+  </script>
+
+</body>
+</html>
